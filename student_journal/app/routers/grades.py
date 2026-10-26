@@ -17,7 +17,7 @@ async def create_grade(data: schemas.GradeCreate, db: AsyncSession = Depends(get
 @router.get("", response_model=list[schemas.GradeRead])
 async def list_grades(
     student_id: Optional[int] = Query(None),
-    subject: Optional[int] = Query(None),
+    subject: Optional[str] = Query(None),
     semester: Optional[int] = Query(None, ge=1, le=12),
     min_mark: Optional[int] = Query(None, ge=1, le=5),
     max_mark: Optional[int] = Query(None, ge=1, le=5),

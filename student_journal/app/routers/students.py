@@ -49,7 +49,7 @@ async def student_average(student_id: int, db: AsyncSession = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Студент не найден")
     return avg
 
-@router.patch("{student_id}", response_model=schemas.StudentRead)
+@router.patch("/{student_id}", response_model=schemas.StudentRead)
 async def update_student(
     student_id: int,
     data: schemas.StudentUpdate,

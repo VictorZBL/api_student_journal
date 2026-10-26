@@ -1,0 +1,46 @@
+:root {
+  --bg: #f6f7fb; --card: #fff; --text: #1f2430;
+  --primary: #2563eb; --danger: #dc2626; --border: #e3e6ef;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: var(--bg); color: var(--text);
+}
+.app { max-width: 1100px; margin: 0 auto; padding: 24px; }
+.header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.header h1 { margin: 0; font-size: 22px; }
+.nav { display: flex; gap: 8px; }
+.nav a {
+  padding: 8px 14px; border-radius: 8px; text-decoration: none;
+  color: var(--text); background: var(--card); border: 1px solid var(--border);
+}
+.nav a.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+.content { background: var(--card); padding: 24px; border-radius: 12px; border: 1px solid var(--border); }
+.toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+.toolbar h2, .toolbar h3 { margin: 0; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.filters input, .filters select, .form input, .form select {
+  padding: 8px 10px; border: 1px solid var(--border); border-radius: 8px; font-size: 14px;
+}
+.table { width: 100%; border-collapse: collapse; }
+.table th, .table td { text-align: left; padding: 10px; border-bottom: 1px solid var(--border); }
+.table th { font-size: 13px; text-transform: uppercase; color: #6b7280; }
+.actions { display: flex; gap: 6px; }
+.btn {
+  display: inline-block; padding: 8px 14px; border-radius: 8px; border: 1px solid var(--border);
+  background: var(--card); color: var(--text); cursor: pointer; text-decoration: none; font-size: 14px;
+}
+.btn:hover { background: #f0f2f8; }
+.btn-primary { background: var(--primary); color: #fff; border-color: var(--primary); }
+.btn-primary:hover { filter: brightness(1.05); }
+.btn-danger { background: var(--danger); color: #fff; border-color: var(--danger); }
+.btn-sm { padding: 4px 10px; font-size: 13px; }
+.form { display: flex; flex-direction: column; gap: 12px; max-width: 480px; }
+.form label { display: flex; flex-direction: column; gap: 4px; font-size: 14px; }
+.form-actions { display: flex; gap: 8px; }
+.error { background: #fdecec; color: #9b1c1c; padding: 10px 14px; border-radius: 8px; }
+.empty { color: #6b7280; }
+h1, h2, h3 {
+  color: #1f2430;
+}

@@ -1,0 +1,4 @@
+api_start:
+...\student_journal>python -m uvicorn app.main:app --loop asyncio:SelectorEventLoop
+app_start:
+...\student_journal\frontend>npm run dev
